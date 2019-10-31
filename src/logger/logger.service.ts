@@ -4,10 +4,11 @@ import { Injectable, Scope } from '@nestjs/common';
   scope: Scope.TRANSIENT,
 })
 export class LoggerService {
-  private prefix;
-  private logger;
+  prefix;
+  logger;
 
   constructor() {
+    console.log('logger service constructor');
     this.logger = console;
   }
 

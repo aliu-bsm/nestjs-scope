@@ -6,6 +6,10 @@ import { Injectable, Scope } from '@nestjs/common';
 export class ContextService {
   private context;
 
+  constructor() {
+    console.log('ContextService/constructor');
+  }
+
   setContext(obj: any): void {
     this.context = obj;
   }

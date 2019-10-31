@@ -10,11 +10,13 @@ export class AppController {
     private readonly context: ContextService,
     private readonly appService: AppService,
   ) {
+    console.log(`AppController/constructor: prefix ${this.log.prefix} logger ${this.log.logger}`);
     this.log.setPrefix('AppController');
   }
 
   @Get()
   getHello(): string {
+    console.log(`AppController/getHello: prefix ${this.log.prefix} logger ${this.log.logger}`);
     this.context.setContext({
       time: new Date().toISOString(),
     });
